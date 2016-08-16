@@ -1,6 +1,7 @@
 FROM alpine
 
 RUN apk add --no-cache nodejs tzdata && \
+	apk add --no-cache python && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone && \
     apk del tzdata
 
