@@ -7,12 +7,6 @@ const Koa = require('koa')
 const app = new Koa()
 const serve = require('koa-static-server')
 
-// static file middleware
-app.use(serve({
-    rootDir: './static',
-    rootPath: '/static'
-}))
-
 // router
 const router = require('./router')
 app.use(router.routes())
