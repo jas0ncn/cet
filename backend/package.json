@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "pm2 start /opt/workdir/backend/app.js -i max",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "jas0ncn",
