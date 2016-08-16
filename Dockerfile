@@ -11,7 +11,7 @@ RUN cd /tmp && npm install --production && npm install pm2 -g && \
     mkdir -p /opt/workdir && mv /tmp/node_modules /opt/workdir/
 
 WORKDIR /opt/workdir
-COPY dist/*.* /opt/workdir
+COPY dist/ /opt/workdir
 
 EXPOSE 3000
 
