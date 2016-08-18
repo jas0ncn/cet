@@ -60,7 +60,7 @@ export default {
             stuname: '',
             ticket: '',
             cetType: '',
-            showGrade: true,
+            showGrade: false,
             warning: false,
             warningTips: '',
             grade: {}
