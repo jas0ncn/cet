@@ -1,4 +1,6 @@
-FROM alpine
+FROM nginx:1.10.1-alpine
+
+COPY nginx.conf /etc/nginx/nginx.conf
 
 RUN apk add --no-cache nodejs tzdata && \
 	apk add --no-cache make gcc g++ python && \
@@ -13,6 +15,6 @@ RUN cd /tmp && npm install --production && npm install pm2 -g && \
 WORKDIR /opt/workdir
 COPY dist/ /opt/workdir
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["npm", "start"]
