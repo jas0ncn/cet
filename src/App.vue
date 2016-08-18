@@ -137,7 +137,7 @@ header {
         font-size: 28px;
         text-shadow: 0 0 5px rgba(0,0,0,.4);
         line-height: 100px;
-        background-image: url('assets/bg.jpg');
+        background-image: url('./assets/bg.jpg');
         background-size: 100% 100%;
         text-align: center;
 
