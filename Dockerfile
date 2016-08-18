@@ -9,7 +9,7 @@ RUN apk add --no-cache nodejs tzdata && \
 
 COPY dist/package.json /tmp/package.json
 
-RUN cd /tmp && npm install --production && npm install pm2 -g && \
+RUN cd /tmp && npm install --production && npm install pm2 request -g && \
     mkdir -p /opt/workdir && mv /tmp/node_modules /opt/workdir/
 
 WORKDIR /opt/workdir
