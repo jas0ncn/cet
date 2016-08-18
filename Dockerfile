@@ -1,6 +1,4 @@
-FROM nginx:1.10.1-alpine
-
-COPY nginx.conf /etc/nginx/nginx.conf
+FROM alpine
 
 RUN apk add --no-cache nodejs tzdata && \
 	apk add --no-cache make gcc g++ python && \
@@ -16,7 +14,5 @@ WORKDIR /opt/workdir
 COPY dist/ /opt/workdir
 
 EXPOSE 80
-
-RUN nginx
 
 CMD ["npm", "start"]
