@@ -5,7 +5,6 @@ require("babel-polyfill")
 
 const Koa = require('koa')
 const app = new Koa()
-const serve = require('koa-static-server')
 
 // router
 const router = require('./router')

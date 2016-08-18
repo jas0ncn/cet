@@ -1,6 +1,6 @@
 'use strict'
 const router = require('koa-router')({
-	prefix: '/api'
+    prefix: '/api'
 })
 const Controller = require('../controller')
 

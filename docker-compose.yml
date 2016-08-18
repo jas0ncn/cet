@@ -1,0 +1,22 @@
+ijason:
+  image: daocloud.io/dreamaero/jason_blog:dev-056e3d0
+  command: ''
+  privileged: false
+  restart: always
+  volumes:
+    - /opt/workdir:/opt/workdir
+  links:
+    - node1:node1
+  ports:
+    - 80:80
+  environment:
+    - NGINX_HOST=node.ijason.cc
+    - NGINX_PORT=80
+node1:
+  image: daocloud.io/dreamaero/cet:master-b1434eb
+  privileged: false
+  restart: always
+  volumes:
+    - /opt/workdir:/opt/workdir
+  ports:
+    - '3000'
