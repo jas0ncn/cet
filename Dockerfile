@@ -17,4 +17,6 @@ COPY dist/ /opt/workdir
 
 EXPOSE 80
 
+RUN nginx
+
 CMD ["npm", "start"]
